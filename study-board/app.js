@@ -21,4 +21,12 @@ form.addEventListener("submit", (event) => {
   status.textContent = `Added: ${text}`;
   input.value = "";
   input.focus();
+
+  const deleteButton = document.createElement("button");
+  deleteButton.type = "button"
+  deleteButton.textContent = "Delete" ;
+  deleteButton.addEventListener("click", () => {
+    item.remove()
+  })
+
 });
