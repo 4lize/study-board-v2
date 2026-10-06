@@ -27,6 +27,9 @@ form.addEventListener("submit", (event) => {
   deleteButton.textContent = "Delete" ;
   deleteButton.addEventListener("click", () => {
     item.remove()
+    emptyMessage.hidden = list.children.length > 0;
+    status.textContent = "Topic deleted.";
   })
+  item.append(" ", deleteButton);
 
 });
